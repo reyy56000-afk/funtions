@@ -1,0 +1,98 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMZvsT1zOiFTXUJHtbTWSUA",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/reyy56000-afk/funtions/blob/main/functions%20eng-219-074%5C2024\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "vWAAVFn3PKdn"
+      },
+      "outputs": [],
+      "source": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def solve_second_order_de(r1, r2):\n",
+        "    # checking the type of roots\n",
+        "    if r1 == r2:\n",
+        "        yh = \"(C1 + C2*x)e^(\" + str(r1) + \"x)\"\n",
+        "    else:\n",
+        "        yh = \"C1*e^(\" + str(r1) + \"x) + C2*e^(\" + str(r2) + \"x)\"\n",
+        "\n",
+        "    print(\"Homogeneous solution is:\")\n",
+        "    print(\"y_h =\", yh)\n",
+        "\n",
+        "    # user enters the particular solution\n",
+        "    yp = input(\"Enter particular solution y_p: \")\n",
+        "\n",
+        "    print(\"Particular solution is:\")\n",
+        "    print(\"y_p =\", yp)\n",
+        "\n",
+        "    # final general solution\n",
+        "    print(\"General solution is:\")\n",
+        "    print(\"y =\", yh, \"+\", yp)\n",
+        "\n",
+        "\n",
+        "# main part\n",
+        "r1 = float(input(\"Enter first root: \"))\n",
+        "r2 = float(input(\"Enter second root: \"))\n",
+        "\n",
+        "solve_second_order_de(r1, r2)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "M6XfzG3TL_cb",
+        "outputId": "608e72cc-2f24-4004-f4ea-c02e954ba9ef"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter root r1: 2\n",
+            "Enter root r2: 3\n",
+            "Enter the particular solution y_p: x^2\n",
+            "\n",
+            "Homogeneous Solution:\n",
+            "y_h = C1*e^(2.0x) + C2*e^(3.0x)\n",
+            "\n",
+            "Particular Solution:\n",
+            "y_p = x^2\n",
+            "\n",
+            "General Solution:\n",
+            "y = y_h = C1*e^(2.0x) + C2*e^(3.0x) + (x^2)\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
